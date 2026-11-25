@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --md-primary: 37 109 58;
+    --md-on-primary: 255 255 255;
+    --md-primary-container: 210 242 216;
+    --md-on-primary-container: 9 45 23;
+    --md-secondary: 91 98 90;
+    --md-background: 246 248 245;
+    --md-surface: 255 255 255;
+    --md-surface-container: 234 241 232;
+    --md-surface-container-high: 221 233 222;
+    --md-on-surface: 25 29 25;
+    --md-on-surface-variant: 66 73 65;
+    --md-outline: 114 121 111;
+    --md-outline-variant: 196 206 192;
+    --md-error: 186 26 26;
+    --md-success: 33 106 66;
+  }
+
+  :root.dark {
+    color-scheme: dark;
+    --md-primary: 149 213 161;
+    --md-on-primary: 0 57 27;
+    --md-primary-container: 0 82 42;
+    --md-on-primary-container: 178 242 186;
+    --md-secondary: 191 203 188;
+    --md-background: 16 21 17;
+    --md-surface: 23 29 24;
+    --md-surface-container: 32 41 33;
+    --md-surface-container-high: 41 54 42;
+    --md-on-surface: 225 228 221;
+    --md-on-surface-variant: 192 201 190;
+    --md-outline: 137 146 135;
+    --md-outline-variant: 65 75 65;
+    --md-error: 255 180 171;
+    --md-success: 139 213 165;
+  }
+
+  html { background: rgb(var(--md-background)); }
+  body { font-family: Roboto, Arial, sans-serif; }
+  button, input, select { font: inherit; }
+  .material-symbols-rounded { font-family: "Material Symbols Rounded"; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; font-feature-settings: "liga"; -webkit-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased; }
+  button:focus-visible, input:focus-visible, select:focus-visible, [tabindex="0"]:focus-visible {
+    outline: 3px solid rgb(var(--md-primary));
+    outline-offset: 3px;
+  }
+  ::selection { background: rgb(var(--md-primary-container)); color: rgb(var(--md-on-primary-container)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
